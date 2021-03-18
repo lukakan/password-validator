@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta title="Password validator">
+        <style>
+            .messages{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>
+                <label for = "paswordKeeper">Hasło</label>
+            </div>
+            <input id ="passwordKeeper" type="text" onkeyup="passwordValidator()">
+            <div class="messages">
+                <div id="minEightcharacters"></div>
+                <div id="minOneBigLetter"></div>
+                <div id="minOneSmallLetter"></div>
+                <div id="minOneSpecialCharacter"></div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for = "repeatedPassword">Powtórz hasło</label>
+            </div>
+            <input id ="repeatedPassword" type="text" onkeyup="checkIfPasswordAreMatching()">
+            <div class="messages">
+                <div id="passwordMatching"></div>
+            </div>         
+        </div>
+    </body>
+    <script src="myScript.js">
+    </script>
+</html>
