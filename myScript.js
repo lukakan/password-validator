@@ -9,6 +9,7 @@ function passwordValidator(){
     checkIfContainGivenRegexAndPutMessage("[A-Z]", minOneBigLetterMessage, "minOneBigLetter");
     checkIfContainGivenRegexAndPutMessage("[a-z]", minOneSmallLetterMessage, "minOneSmallLetter");
     checkIfContainGivenRegexAndPutMessage("[^A-Za-z0-9]", oneSpecialCharacter, "minOneSpecialCharacter");
+    checkIfPasswordsAreMatching();
 }
 
 function checkIfContainGivenRegexAndPutMessage(regex, message, htmlId){
@@ -21,7 +22,7 @@ function checkIfContainGivenRegexAndPutMessage(regex, message, htmlId){
     }
 }
 
-function checkIfPasswordAreMatching(){
+function checkIfPasswordsAreMatching(){
     let passedText = document.getElementById("passwordKeeper").value;
     let repeatedText = document.getElementById("repeatedPassword").value;
     let equalPasswordsWarining = document.getElementById("passwordMatching");
